@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+class AppColors {
+  static const Color primaryColor = Color(0xffffffff);
+  static const Color accentColor = Color(0xff007480);
+  static const Color accentColor2 = Color(0xFF1A8A29);
+  static const Color splashColor = Color(0xffffffff);
+  static const Color highlightColor = Color(0xff6c757d);
+  static const Color backgroundColor = Color(0xffE5E5E5);
+  static const Color lightBlackText = Color(0xff434343);
+
+  static const Color bg = Color(0xffE5E5E5);
+  static const Color white = Color(0xffffffff);
+  static const Color black = Color(0xff000000);
+  static const Color grey = Color(0xff717171);
+  static const Color red = Color(0xffdc3545);
+  static const Color red2 = Color(0xFFA30515);
+  static const Color pewter = Color(0xffD6D6D6);
+  static const Color lightGrey = Color(0xffC8C8C8);
+  static const Color ivory = Color(0xffF8FAFB);
+  static const Color blueGrey = Color(0xffF0F4F6);
+  static const Color green = Color(0xff39B54A);
+  static const Color darkGreen = Color(0xff056839);
+  static const Color lightGreen = Color(0xff39B54A);
+  static const Color lightGreen1 = Color(0xff31A752);
+  static const Color darkBlue = Color(0xff21445C);
+  static const Color darkCyan = Color(0xff3FAC87);
+  static const Color greylight = Color(0xffe9ecee);
+  static const Color greylittledark = Color(0xffc4c4c4);
+  static const Color greyfulldark = Color(0xff778085);
+  static const Color greytextcolor = Color(0xff5b5b5b);
+  static const Color greyText = Color(0xffABABAB);
+  static const Color blackText = Color(0xff1D1C1D);
+  static const Color darkGrey = Color(0xff163D42);
+  static const Color grey2 = Color(0xffABABAB);
+  static const Color hintTextColor = Colors.white;
+  static const Color headingBlack = Color(0xff010101);
+  static const Color introGreyText = Color(0xff8E8E8E);
+  static const Color dividerColor = Color(0xffeeeeee);
+  static const Color lightGreyBg = Color(0xffEDF1F2);
+  static const Color containerBackgroudGrey = Color(0xffF9F9F9);
+  static const Color dividerGrey = Color(0xffEBEBEB);
+  static const Color transparent = Colors.transparent;
+  static const Color accentNewColor = Color(0xff007480);
+  static const Color textColor = Color(0xff343434);
+  static const Color thunder = Color(0xff1D1C1D);
+  static const Color textfieldHintColor = Color(0xffAEB7BB);
+  static const Color signupback = Color(0xff9EB0BA);
+  static const Color logoTextbackpink = Color(0xffE3E0DB);
+  static const Color containerback = Color(0xffE2E1DC);
+  static const Color buttoncolors = Color(0xff3f535c);
+}
