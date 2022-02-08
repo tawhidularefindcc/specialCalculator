@@ -21,13 +21,13 @@ class OtherCatagoryTotalSellScreen extends StatelessWidget {
             ),
           ),
           backgroundColor: AppColors.containerback,
-          iconTheme: IconThemeData(color: AppColors.buttoncolors),
+          iconTheme: const IconThemeData(color: AppColors.buttoncolors),
         ),
         drawer: const CustomPanel1Drawer(),
         body: Container(
           width: Get.width,
           height: Get.height,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
                 "assets/images/singback.jpeg",
@@ -37,20 +37,20 @@ class OtherCatagoryTotalSellScreen extends StatelessWidget {
           ),
           child: Center(
             child: Column(
-              children: [
-                const SizedBox(
+              children: const [
+                SizedBox(
                   height: 20,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Product Name',
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Amount',
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 15,
                 ),
                 Text(

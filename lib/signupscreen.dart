@@ -66,19 +66,19 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   SizedBox(
                     height: Get.height * 0.05,
                   ),
-                  _textFieldContainer('USERNAME'),
+                  const CustomTextFieldContainer(hintText: 'USERNAME'),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
-                  _textFieldContainer('EMAIL'),
+                  const CustomTextFieldContainer(hintText: 'EMAIL'),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
-                  _textFieldContainer('PASSWORD'),
+                  const CustomTextFieldContainer(hintText: 'PASSWORD'),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
-                  _textFieldContainer('CONFIRM PASSWORD'),
+                  const CustomTextFieldContainer(hintText: 'CONFIRM PASSWORD'),
                   SizedBox(
                     height: Get.height * 0.05,
                   ),
@@ -93,12 +93,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _textFieldContainer(String hintvalue) {
-    return CustomTextFieldContainer(
-      hintText: hintvalue,
     );
   }
 }

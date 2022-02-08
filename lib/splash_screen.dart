@@ -22,10 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void getHomeScreen() async {
     // ignore: prefer_const_constructors
     Timer(Duration(seconds: 3), () async {
-      await Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => const WelcomeScreen()),
-      );
+      await Get.off(()=>const WelcomeScreen());
     });
   }
 

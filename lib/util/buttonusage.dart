@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class Buttonusage extends StatelessWidget {
   const Buttonusage(
-      {required this.colour, required this.onpressedd, required this.name});
+      {Key? key, required this.colour, required this.onpressedd, required this.name}) : super(key: key);
   final Color colour;
   final Function onpressedd;
   final String name;
@@ -24,7 +23,7 @@ class Buttonusage extends StatelessWidget {
           height: Get.height * 0.09,
           child: Text(
             name,
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: const TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
       ),

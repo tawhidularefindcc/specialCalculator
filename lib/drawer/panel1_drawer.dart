@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:specialcalculator/other_catagory_total_sell.dart';
 
 import '../biller_paid_out_screen.dart';
@@ -24,22 +25,14 @@ class CustomPanel1Drawer extends StatelessWidget {
           ListTile(
             title: const Text('Primary'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const Panel1PrimaryScreen()),
-              );
+              Get.to(()=>const Panel1PrimaryScreen());
             },
           ),
           divider,
           ListTile(
             title: const Text('Secondary'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const Panel1SecondryScreen()),
-              );
+              Get.to(()=>const Panel1SecondryScreen());
             },
           ),
           divider,
@@ -47,21 +40,14 @@ class CustomPanel1Drawer extends StatelessWidget {
             title: const Text('Today Sell'),
             onTap: () {
               //TodaySellScreen
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const TodaySellScreen()),
-              );
+              Get.to(()=>const TodaySellScreen());
             },
           ),
           divider,
           ListTile(
             title: const Text('Biller Paid out'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const BillerPaidOut()),
-              );
+              Get.to(()=>const BillerPaidOut());
               // Navigator.pop(context);
             },
           ),
@@ -69,11 +55,7 @@ class CustomPanel1Drawer extends StatelessWidget {
           ListTile(
             title: const Text('Others category total sell'),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const OtherCatagoryTotalSellScreen()),
-              );
+              Get.to(()=>const OtherCatagoryTotalSellScreen());
               // Navigator.pop(context);
             },
           ),

@@ -4,7 +4,6 @@ import 'package:specialcalculator/login_screen.dart';
 import 'package:specialcalculator/signupscreen.dart';
 import 'package:specialcalculator/util/buttonusage.dart';
 import 'package:specialcalculator/util/colors.dart';
-import 'package:specialcalculator/util/constants.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -71,10 +70,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     colour: AppColors.buttoncolors,
                     name: 'SIGN UP',
                     onpressedd: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const SignUpScreen()),
-                      );
+                      Get.off(()=>const SignUpScreen());
                     },
                   ),
                   SizedBox(
@@ -84,35 +80,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     colour: AppColors.buttoncolors,
                     name: 'LOGIN',
                     onpressedd: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const LoginScreen()),
-                      );
+                      Get.off(()=>const LoginScreen());
                     },
                   ),
                 ],
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Container _textFieldContainer(String hintvalue) {
-    return Container(
-      width: Get.width * 0.9,
-      decoration: BoxDecoration(
-        color: AppColors.containerback,
-        border: Border.all(width: 3.0, color: AppColors.containerback),
-        borderRadius: const BorderRadius.all(
-            Radius.circular(25.0) //                 <--- border radius here
-            ),
-      ),
-      child: TextField(
-        onChanged: (value) {},
-        decoration: ktextFieldDecoration.copyWith(
-          hintText: hintvalue,
         ),
       ),
     );

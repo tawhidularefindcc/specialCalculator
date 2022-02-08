@@ -39,11 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 colour: AppColors.buttoncolors,
                 name: 'PANEL 1',
                 onpressedd: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Panel1PrimaryScreen()),
-                  );
+                  Get.to(()=>const Panel1PrimaryScreen());
                 },
               ),
               SizedBox(
@@ -53,11 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 colour: AppColors.buttoncolors,
                 name: 'PANEL 2',
                 onpressedd: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => Panel2TodayInputBuy()),
-                  );
+                  Get.to(()=>const Panel2TodayInputBuy());
                 },
               ),
               SizedBox(
@@ -67,11 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 colour: AppColors.buttoncolors,
                 name: 'PANEL 3',
                 onpressedd: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ShopDisplayProductStatus()),
-                  );
+                  Get.to(()=>const ShopDisplayProductStatus());
                 },
               ),
               SizedBox(

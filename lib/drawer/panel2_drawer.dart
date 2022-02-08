@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:specialcalculator/stock_to_shop_display_transfer.dart';
 import 'package:specialcalculator/total_stock_screen.dart';
-
-import '../biller_paid_out_screen.dart';
-import '../panel1_primary.dart';
-import '../panel1_secondry.dart';
 import '../today_sell_screen.dart';
 
 const divider = Divider(

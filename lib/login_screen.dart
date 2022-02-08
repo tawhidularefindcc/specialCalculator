@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:specialcalculator/custom_text_field_container.dart';
 import 'package:specialcalculator/home.dart';
 import 'package:specialcalculator/util/buttonusage.dart';
 import 'package:specialcalculator/util/colors.dart';
-import 'package:specialcalculator/util/constants.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -66,11 +66,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: Get.height * 0.05,
                   ),
-                  _textFieldContainer('EMAIL'),
+                  const CustomTextFieldContainer(hintText: 'EMAIL'),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
-                  _textFieldContainer('PASSWORD'),
+                  const CustomTextFieldContainer(hintText: 'PASSWORD'),
                   SizedBox(
                     height: Get.height * 0.05,
                   ),
@@ -78,35 +78,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     colour: AppColors.buttoncolors,
                     name: 'LOGIN',
                     onpressedd: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const HomeScreen()),
-                      );
+                      Get.off(()=>const HomeScreen());
                     },
                   ),
                 ],
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Container _textFieldContainer(String hintvalue) {
-    return Container(
-      width: Get.width * 0.9,
-      decoration: BoxDecoration(
-        color: AppColors.containerback,
-        border: Border.all(width: 3.0, color: AppColors.containerback),
-        borderRadius: const BorderRadius.all(
-            Radius.circular(25.0) //                 <--- border radius here
-            ),
-      ),
-      child: TextField(
-        onChanged: (value) {},
-        decoration: ktextFieldDecoration.copyWith(
-          hintText: hintvalue,
         ),
       ),
     );

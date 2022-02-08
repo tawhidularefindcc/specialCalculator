@@ -35,14 +35,14 @@ class TotalStockScreen extends StatelessWidget {
             ),
           ),
           child: Column(
-            children: [
-              const SizedBox(
+            children: const [
+              SizedBox(
                 height: 20,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Product Name/sku',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
               Text(
@@ -53,7 +53,7 @@ class TotalStockScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
             ],

@@ -35,26 +35,26 @@ class Panel1SecondryScreen extends StatelessWidget {
             ),
           ),
           child: Column(
-            children: [
-              const SizedBox(
+            children: const [
+              SizedBox(
                 height: 20,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Product Name',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Lottery 1',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Lottery 2',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
               Text(

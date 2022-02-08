@@ -27,7 +27,7 @@ class TodaySellScreen extends StatelessWidget {
         body: Container(
           width: Get.width,
           height: Get.height,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
                 "assets/images/singback.jpeg",
@@ -39,7 +39,7 @@ class TodaySellScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+                children: const [
                   SizedBox(
                     height: 20,
                   ),

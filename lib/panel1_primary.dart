@@ -21,7 +21,7 @@ class Panel1PrimaryScreen extends StatelessWidget {
             ),
           ),
           backgroundColor: AppColors.containerback,
-          iconTheme: IconThemeData(color: AppColors.buttoncolors),
+          iconTheme: const IconThemeData(color: AppColors.buttoncolors),
         ),
         drawer: const CustomPanel1Drawer(),
         body: Container(
@@ -35,26 +35,26 @@ class Panel1PrimaryScreen extends StatelessWidget {
             ),
           ),
           child: Column(
-            children: [
-              const SizedBox(
+            children: const [
+              SizedBox(
                 height: 20,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Product Name',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Lottery 1',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Lottery 2',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
               Text(

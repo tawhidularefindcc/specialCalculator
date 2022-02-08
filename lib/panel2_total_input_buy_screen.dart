@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:specialcalculator/drawer/panel2_drawer.dart';
 
 import 'custom_text_field_container.dart';
-import 'drawer/panel1_drawer.dart';
 import 'util/colors.dart';
 
 class Panel2TodayInputBuy extends StatelessWidget {
@@ -36,32 +35,32 @@ class Panel2TodayInputBuy extends StatelessWidget {
             ),
           ),
           child: Column(
-            children: [
-              const SizedBox(
+            children: const [
+              SizedBox(
                 height: 20,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Biller Name',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Product name& sku',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Total Product',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
-              const CustomTextFieldContainer(
+              CustomTextFieldContainer(
                 hintText: 'Product Price',
               ),
-              const SizedBox(
+              SizedBox(
                 height: 15,
               ),
               Text(
