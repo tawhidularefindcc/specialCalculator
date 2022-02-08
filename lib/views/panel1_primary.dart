@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:specialcalculator/util/buttonusage.dart';
 import 'package:specialcalculator/util/colors.dart';
 
 import '/util/custom_text_field_container.dart';
@@ -35,29 +36,43 @@ class Panel1PrimaryScreen extends StatelessWidget {
             ),
           ),
           child: Column(
-            children: const [
-              SizedBox(
+            children:  [
+              const SizedBox(
                 height: 20,
               ),
-              CustomTextFieldContainer(
+              const CustomTextFieldContainer(
                 hintText: 'Product Name',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              CustomTextFieldContainer(
+              const CustomTextFieldContainer(
                 hintText: 'Lottery 1',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              CustomTextFieldContainer(
+              const CustomTextFieldContainer(
                 hintText: 'Lottery 2',
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Text(
+              const CustomTextFieldContainer(
+                hintText: 'Lottery 3',
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Buttonusage(
+                    colour: AppColors.buttoncolors,
+                    name: 'Add Product',
+                    onpressedd: () {},
+                  ),
+              const SizedBox(
+                height: 15,
+              ),
+              const Text(
                 'Total Count : 0',
                 style: TextStyle(
                   color: Colors.black,
@@ -65,7 +80,7 @@ class Panel1PrimaryScreen extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Text(
+              const Text(
                 'Total Price : 0',
                 style: TextStyle(
                   color: Colors.black,

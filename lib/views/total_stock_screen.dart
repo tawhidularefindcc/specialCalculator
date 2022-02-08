@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/drawer/panel2_drawer.dart';
+import '/drawer/panel2_drawer.dart';
 
 import '/util/custom_text_field_container.dart';
 import '/util/colors.dart';
