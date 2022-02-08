@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:specialcalculator/stock_to_shop_display_transfer.dart';
-import 'package:specialcalculator/total_stock_screen.dart';
-import '../today_sell_screen.dart';
+import '/views/stock_to_shop_display_transfer.dart';
+import '/views/today_sell_screen.dart';
+import '/views/total_stock_screen.dart';
 
 const divider = Divider(
   color: Colors.grey,

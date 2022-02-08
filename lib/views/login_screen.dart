@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:specialcalculator/util/custom_text_field_container.dart';
+import 'home.dart';
 import 'package:specialcalculator/util/buttonusage.dart';
 import 'package:specialcalculator/util/colors.dart';
 
-import 'custom_text_field_container.dart';
-
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  _SignUpScreenState createState() => _SignUpScreenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,26 +66,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   SizedBox(
                     height: Get.height * 0.05,
                   ),
-                  const CustomTextFieldContainer(hintText: 'USERNAME'),
-                  SizedBox(
-                    height: Get.height * 0.03,
-                  ),
                   const CustomTextFieldContainer(hintText: 'EMAIL'),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
                   const CustomTextFieldContainer(hintText: 'PASSWORD'),
                   SizedBox(
-                    height: Get.height * 0.03,
-                  ),
-                  const CustomTextFieldContainer(hintText: 'CONFIRM PASSWORD'),
-                  SizedBox(
                     height: Get.height * 0.05,
                   ),
                   Buttonusage(
                     colour: AppColors.buttoncolors,
-                    name: 'SIGN UP',
-                    onpressedd: () {},
+                    name: 'LOGIN',
+                    onpressedd: () {
+                      Get.off(()=>const HomeScreen());
+                    },
                   ),
                 ],
               ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/panel1_primary.dart';
-import 'package:specialcalculator/panel2_total_input_buy_screen.dart';
-import 'package:specialcalculator/panel3_shop_display_product_status_screen.dart';
-import 'package:specialcalculator/util/buttonusage.dart';
-import 'package:specialcalculator/util/colors.dart';
+import '/util/buttonusage.dart';
+import '/util/colors.dart';
+import 'panel1_primary.dart';
+import 'panel2_total_input_buy_screen.dart';
+import 'panel3_shop_display_product_status_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

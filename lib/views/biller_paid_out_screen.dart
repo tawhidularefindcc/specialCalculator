@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:specialcalculator/util/colors.dart';
 
-import 'custom_text_field_container.dart';
-import 'drawer/panel1_drawer.dart';
+import '/util/custom_text_field_container.dart';
+import '/drawer/panel1_drawer.dart';
 
 class BillerPaidOut extends StatelessWidget {
   const BillerPaidOut({Key? key}) : super(key: key);

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/drawer/panel2_drawer.dart';
 
-import 'custom_text_field_container.dart';
-import 'util/colors.dart';
+import '/util/custom_text_field_container.dart';
+import '/util/colors.dart';
 
-class StockToShopDisplayTransferScreen extends StatelessWidget {
-  const StockToShopDisplayTransferScreen({Key? key}) : super(key: key);
+class ShopDisplayProductStatus extends StatelessWidget {
+  const ShopDisplayProductStatus({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class StockToShopDisplayTransferScreen extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'Stock To Shop Display Transfer',
+            'Shop Display Product Status',
             style: TextStyle(
               color: AppColors.buttoncolors,
             ),
@@ -23,7 +22,7 @@ class StockToShopDisplayTransferScreen extends StatelessWidget {
           backgroundColor: AppColors.containerback,
           iconTheme: const IconThemeData(color: AppColors.buttoncolors),
         ),
-        drawer: const CustomPanel2Drawer(),
+        //drawer: const CustomPanel1Drawer(),
         body: Container(
           width: Get.width * 1,
           decoration: const BoxDecoration(
@@ -40,24 +39,13 @@ class StockToShopDisplayTransferScreen extends StatelessWidget {
                 height: 20,
               ),
               CustomTextFieldContainer(
-                hintText: 'Product name/sku',
+                hintText: 'Product name',
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextFieldContainer(
-                hintText: 'Amount of total product transfer',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                'Update stock status: ',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                hintText: 'Amount of product',
               ),
             ],
           ),

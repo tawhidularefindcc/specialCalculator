@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/login_screen.dart';
-import 'package:specialcalculator/signupscreen.dart';
-import 'package:specialcalculator/util/buttonusage.dart';
-import 'package:specialcalculator/util/colors.dart';
+import 'util/buttonusage.dart';
+import 'util/colors.dart';
+import 'views/login_screen.dart';
+
+import 'views/signupscreen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

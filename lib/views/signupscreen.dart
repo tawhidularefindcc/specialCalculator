@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/custom_text_field_container.dart';
-import 'package:specialcalculator/home.dart';
 import 'package:specialcalculator/util/buttonusage.dart';
 import 'package:specialcalculator/util/colors.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+import '/util/custom_text_field_container.dart';
+
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _SignUpScreenState createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,20 +66,26 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: Get.height * 0.05,
                   ),
+                  const CustomTextFieldContainer(hintText: 'USERNAME'),
+                  SizedBox(
+                    height: Get.height * 0.03,
+                  ),
                   const CustomTextFieldContainer(hintText: 'EMAIL'),
                   SizedBox(
                     height: Get.height * 0.03,
                   ),
                   const CustomTextFieldContainer(hintText: 'PASSWORD'),
                   SizedBox(
+                    height: Get.height * 0.03,
+                  ),
+                  const CustomTextFieldContainer(hintText: 'CONFIRM PASSWORD'),
+                  SizedBox(
                     height: Get.height * 0.05,
                   ),
                   Buttonusage(
                     colour: AppColors.buttoncolors,
-                    name: 'LOGIN',
-                    onpressedd: () {
-                      Get.off(()=>const HomeScreen());
-                    },
+                    name: 'SIGN UP',
+                    onpressedd: () {},
                   ),
                 ],
               ),

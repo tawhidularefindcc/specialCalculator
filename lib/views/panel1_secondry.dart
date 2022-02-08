@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/drawer/panel2_drawer.dart';
 
-import 'custom_text_field_container.dart';
-import 'util/colors.dart';
+import '/util/custom_text_field_container.dart';
+import '/drawer/panel1_drawer.dart';
+import '/util/colors.dart';
 
-class Panel2TodayInputBuy extends StatelessWidget {
-  const Panel2TodayInputBuy({Key? key}) : super(key: key);
+class Panel1SecondryScreen extends StatelessWidget {
+  const Panel1SecondryScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class Panel2TodayInputBuy extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'Today Input Buy',
+            'Secondry Screen',
             style: TextStyle(
               color: AppColors.buttoncolors,
             ),
@@ -23,7 +23,7 @@ class Panel2TodayInputBuy extends StatelessWidget {
           backgroundColor: AppColors.containerback,
           iconTheme: const IconThemeData(color: AppColors.buttoncolors),
         ),
-        drawer: const CustomPanel2Drawer(),
+        drawer: const CustomPanel1Drawer(),
         body: Container(
           width: Get.width * 1,
           decoration: const BoxDecoration(
@@ -40,31 +40,33 @@ class Panel2TodayInputBuy extends StatelessWidget {
                 height: 20,
               ),
               CustomTextFieldContainer(
-                hintText: 'Biller Name',
+                hintText: 'Product Name',
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextFieldContainer(
-                hintText: 'Product name& sku',
+                hintText: 'Lottery 1',
               ),
               SizedBox(
                 height: 15,
               ),
               CustomTextFieldContainer(
-                hintText: 'Total Product',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Product Price',
+                hintText: 'Lottery 2',
               ),
               SizedBox(
                 height: 15,
               ),
               Text(
-                'Total Amount : ',
+                'Total Count : 0',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Total Price : 0',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 25,

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:specialcalculator/other_catagory_total_sell.dart';
-
-import '../biller_paid_out_screen.dart';
-import '../panel1_primary.dart';
-import '../panel1_secondry.dart';
-import '../today_sell_screen.dart';
+import '/views/biller_paid_out_screen.dart';
+import '/views/other_catagory_total_sell.dart';
+import '/views/panel1_primary.dart';
+import '/views/panel1_secondry.dart';
+import '/views/today_sell_screen.dart';
 
 const divider = Divider(
   color: Colors.grey,

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:specialcalculator/drawer/panel2_drawer.dart';
 
-import 'custom_text_field_container.dart';
-import 'util/colors.dart';
+import '/util/custom_text_field_container.dart';
+import '/util/colors.dart';
 
-class TotalStockScreen extends StatelessWidget {
-  const TotalStockScreen({Key? key}) : super(key: key);
+class StockToShopDisplayTransferScreen extends StatelessWidget {
+  const StockToShopDisplayTransferScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class TotalStockScreen extends StatelessWidget {
         appBar: AppBar(
           centerTitle: true,
           title: const Text(
-            'Total Stock',
+            'Stock To Shop Display Transfer',
             style: TextStyle(
               color: AppColors.buttoncolors,
             ),
@@ -40,21 +40,24 @@ class TotalStockScreen extends StatelessWidget {
                 height: 20,
               ),
               CustomTextFieldContainer(
-                hintText: 'Product Name/sku',
+                hintText: 'Product name/sku',
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              CustomTextFieldContainer(
+                hintText: 'Amount of total product transfer',
               ),
               SizedBox(
                 height: 15,
               ),
               Text(
-                'Total number of Product',
+                'Update stock status: ',
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
-              ),
-              SizedBox(
-                height: 15,
               ),
             ],
           ),
