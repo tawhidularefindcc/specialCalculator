@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:specialcalculator/views/login_screen.dart';
 import '/views/stock_to_shop_display_transfer.dart';
 import '/views/today_sell_screen.dart';
 import '/views/total_stock_screen.dart';
@@ -51,6 +53,14 @@ class CustomPanel2Drawer extends StatelessWidget {
                     builder: (context) =>
                         const StockToShopDisplayTransferScreen()),
               );
+              // Navigator.pop(context);
+            },
+          ),
+          divider,
+          ListTile(
+            title: const Text('Log Out'),
+            onTap: () {
+              Get.to(()=>const LoginScreen());
               // Navigator.pop(context);
             },
           ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:specialcalculator/views/login_screen.dart';
 import '/views/biller_paid_out_screen.dart';
 import '/views/other_catagory_total_sell.dart';
 import '/views/panel1_primary.dart';
@@ -55,6 +56,14 @@ class CustomPanel1Drawer extends StatelessWidget {
             title: const Text('Others category total sell'),
             onTap: () {
               Get.to(()=>const OtherCatagoryTotalSellScreen());
+              // Navigator.pop(context);
+            },
+          ),
+          divider,
+          ListTile(
+            title: const Text('Log Out'),
+            onTap: () {
+              Get.to(()=>const LoginScreen());
               // Navigator.pop(context);
             },
           ),
