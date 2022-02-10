@@ -22,6 +22,7 @@ class CustomTextFieldContainer extends StatelessWidget {
             ),
       ),
       child: TextField(
+        controller: TextEditingController(),
         cursorColor: AppColors.greytextcolor,
         decoration: ktextFieldDecoration.copyWith(
           hintText: hintText!,

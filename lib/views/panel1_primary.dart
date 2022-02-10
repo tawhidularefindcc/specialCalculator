@@ -11,6 +11,7 @@ class Panel1PrimaryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var itemCount = 0;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -67,14 +68,16 @@ class Panel1PrimaryScreen extends StatelessWidget {
               Buttonusage(
                     colour: AppColors.buttoncolors,
                     name: 'Add Product',
-                    onpressedd: () {},
+                    onpressedd: () {
+                      itemCount++;
+                    },
                   ),
               const SizedBox(
                 height: 15,
               ),
-              const Text(
-                'Total Count : 0',
-                style: TextStyle(
+               Text(
+                'Total Count : $itemCount',
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
