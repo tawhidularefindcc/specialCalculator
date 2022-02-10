@@ -35,54 +35,56 @@ class Panel1SecondryScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children:  [
-              const SizedBox(
-                height: 20,
-              ),
-              const CustomTextFieldContainer(
-                hintText: 'Product Name',
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              const CustomTextFieldContainer(
-                hintText: 'Lottery 1',
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              const CustomTextFieldContainer(
-                hintText: 'Lottery 2',
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Buttonusage(
-                    colour: AppColors.buttoncolors,
-                    name: 'Add Product',
-                    onpressedd: () {},
+          child: SingleChildScrollView(
+            child: Column(
+              children:  [
+                const SizedBox(
+                  height: 20,
+                ),
+                const CustomTextFieldContainer(
+                  hintText: 'Product Name',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const CustomTextFieldContainer(
+                  hintText: 'Lottery 1',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const CustomTextFieldContainer(
+                  hintText: 'Lottery 2',
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Buttonusage(
+                      colour: AppColors.buttoncolors,
+                      name: 'Add Product',
+                      onpressedd: () {},
+                    ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
+                  'Total Count : 0',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
                   ),
-              const SizedBox(
-                height: 15,
-              ),
-              const Text(
-                'Total Count : 0',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
                 ),
-              ),
-              const Text(
-                'Total Price : 0',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+                const Text(
+                  'Total Price : 0',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

@@ -34,32 +34,34 @@ class StockToShopDisplayTransferScreen extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: const [
-              SizedBox(
-                height: 20,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Product name/sku',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Amount of total product transfer',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                'Update stock status: ',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-            ],
+                CustomTextFieldContainer(
+                  hintText: 'Product name/sku',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CustomTextFieldContainer(
+                  hintText: 'Amount of total product transfer',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'Update stock status: ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

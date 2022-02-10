@@ -34,44 +34,46 @@ class Panel2TodayInputBuy extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: const [
-              SizedBox(
-                height: 20,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Biller Name',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Product name& sku',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Total Product',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Product Price',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              Text(
-                'Total Amount : ',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                SizedBox(
+                  height: 20,
                 ),
-              ),
-            ],
+                CustomTextFieldContainer(
+                  hintText: 'Biller Name',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CustomTextFieldContainer(
+                  hintText: 'Product name& sku',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CustomTextFieldContainer(
+                  hintText: 'Total Product',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CustomTextFieldContainer(
+                  hintText: 'Product Price',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'Total Amount : ',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

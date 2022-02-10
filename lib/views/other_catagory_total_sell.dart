@@ -36,32 +36,34 @@ class OtherCatagoryTotalSellScreen extends StatelessWidget {
             ),
           ),
           child: Center(
-            child: Column(
-              children: const [
-                SizedBox(
-                  height: 20,
-                ),
-                CustomTextFieldContainer(
-                  hintText: 'Product Name',
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                CustomTextFieldContainer(
-                  hintText: 'Amount',
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Text(
-                  'Total: ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+            child: SingleChildScrollView(
+              child: Column(
+                children: const [
+                  SizedBox(
+                    height: 20,
                   ),
-                ),
-              ],
+                  CustomTextFieldContainer(
+                    hintText: 'Product Name',
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  CustomTextFieldContainer(
+                    hintText: 'Amount',
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    'Total: ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

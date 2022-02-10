@@ -33,21 +33,23 @@ class ShopDisplayProductStatus extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: const [
-              SizedBox(
-                height: 20,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Product name',
-              ),
-              SizedBox(
-                height: 15,
-              ),
-              CustomTextFieldContainer(
-                hintText: 'Amount of product',
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                SizedBox(
+                  height: 20,
+                ),
+                CustomTextFieldContainer(
+                  hintText: 'Product name',
+                ),
+                SizedBox(
+                  height: 15,
+                ),
+                CustomTextFieldContainer(
+                  hintText: 'Amount of product',
+                ),
+              ],
+            ),
           ),
         ),
       ),
