@@ -6,12 +6,22 @@ import 'package:specialcalculator/util/colors.dart';
 import '/util/custom_text_field_container.dart';
 import '/drawer/panel1_drawer.dart';
 
-class Panel1PrimaryScreen extends StatelessWidget {
+class Panel1PrimaryScreen extends StatefulWidget {
   const Panel1PrimaryScreen({Key? key}) : super(key: key);
 
   @override
+  State<Panel1PrimaryScreen> createState() => _Panel1PrimaryScreenState();
+}
+
+class _Panel1PrimaryScreenState extends State<Panel1PrimaryScreen> {
+  var itemCount = 0;
+  var totalPrice = 0;
+  TextEditingController lot1 = TextEditingController();
+  TextEditingController lot2 = TextEditingController();
+  TextEditingController lot3 = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
-    var itemCount = 0;
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -27,6 +37,7 @@ class Panel1PrimaryScreen extends StatelessWidget {
         ),
         drawer: const CustomPanel1Drawer(),
         body: Container(
+          height: Get.height,
           width: Get.width * 1,
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -48,20 +59,23 @@ class Panel1PrimaryScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Lottery 1',
+                  controller: lot1,
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Lottery 2',
+                  controller: lot2,
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Lottery 3',
+                  controller: lot3,
                 ),
                 const SizedBox(
                   height: 15,
@@ -70,7 +84,21 @@ class Panel1PrimaryScreen extends StatelessWidget {
                       colour: AppColors.buttoncolors,
                       name: 'Add Product',
                       onpressedd: () {
-                        itemCount++;
+                        lot1.text.isEmpty?
+                        setState(() {
+                          totalPrice = (int.parse(lot2.text)+int.parse(lot3.text));
+                        }):
+                        lot2.text.isEmpty?
+                        setState(() {
+                          totalPrice = (int.parse(lot1.text)+int.parse(lot3.text));
+                        }):
+                        lot3.text.isEmpty?
+                        setState(() {
+                          totalPrice = (int.parse(lot1.text)+int.parse(lot2.text));
+                        }):
+                        setState(() {
+                          totalPrice = (int.parse(lot1.text)+int.parse(lot2.text)+int.parse(lot3.text));
+                        });
                       },
                     ),
                 const SizedBox(
@@ -84,9 +112,9 @@ class Panel1PrimaryScreen extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
-                  'Total Price : 0',
-                  style: TextStyle(
+                Text(
+                  'Total Price : $totalPrice',
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,

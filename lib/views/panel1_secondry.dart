@@ -6,8 +6,18 @@ import '/util/custom_text_field_container.dart';
 import '/drawer/panel1_drawer.dart';
 import '/util/colors.dart';
 
-class Panel1SecondryScreen extends StatelessWidget {
+class Panel1SecondryScreen extends StatefulWidget {
   const Panel1SecondryScreen({Key? key}) : super(key: key);
+
+  @override
+  State<Panel1SecondryScreen> createState() => _Panel1SecondryScreenState();
+}
+
+class _Panel1SecondryScreenState extends State<Panel1SecondryScreen> {
+  var itemCount = 0;
+  var totalPrice = 0;
+  TextEditingController lot1 = TextEditingController();
+  TextEditingController lot2 = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +57,16 @@ class Panel1SecondryScreen extends StatelessWidget {
                 const SizedBox(
                   height: 15,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Lottery 1',
+                  controller: lot1,
                 ),
                 const SizedBox(
                   height: 15,
                 ),
-                const CustomTextFieldContainer(
+                CustomTextFieldContainer(
                   hintText: 'Lottery 2',
+                  controller: lot2,
                 ),
                 const SizedBox(
                   height: 15,
@@ -62,22 +74,26 @@ class Panel1SecondryScreen extends StatelessWidget {
                 Buttonusage(
                       colour: AppColors.buttoncolors,
                       name: 'Add Product',
-                      onpressedd: () {},
+                      onpressedd: () {
+                          setState(() {
+                          totalPrice = (int.parse(lot1.text)+int.parse(lot2.text));
+                        });
+                      },
                     ),
                 const SizedBox(
                   height: 15,
                 ),
-                const Text(
-                  'Total Count : 0',
-                  style: TextStyle(
+                Text(
+                  'Total Count : $itemCount',
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
-                  'Total Price : 0',
-                  style: TextStyle(
+                Text(
+                  'Total Price : $totalPrice',
+                  style: const TextStyle(
                     color: Colors.black,
                     fontSize: 25,
                     fontWeight: FontWeight.bold,

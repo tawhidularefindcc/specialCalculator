@@ -5,9 +5,11 @@ import 'package:specialcalculator/util/constants.dart';
 
 class CustomTextFieldContainer extends StatelessWidget {
   final String? hintText;
+  final TextEditingController? controller;
   const CustomTextFieldContainer({
     Key? key,
     @required this.hintText,
+    @required this.controller,
   }) : super(key: key);
 
   @override
@@ -22,7 +24,7 @@ class CustomTextFieldContainer extends StatelessWidget {
             ),
       ),
       child: TextField(
-        controller: TextEditingController(),
+        controller: controller,
         cursorColor: AppColors.greytextcolor,
         decoration: ktextFieldDecoration.copyWith(
           hintText: hintText!,
