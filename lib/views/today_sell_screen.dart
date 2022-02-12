@@ -1,12 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:specialcalculator/util/buttonusage.dart';
 import 'package:specialcalculator/util/colors.dart';
 
 import '/util/custom_text_field_container.dart';
 import '/drawer/panel1_drawer.dart';
 
-class TodaySellScreen extends StatelessWidget {
+class TodaySellScreen extends StatefulWidget {
   const TodaySellScreen({Key? key}) : super(key: key);
+
+  @override
+  State<TodaySellScreen> createState() => _TodaySellScreenState();
+}
+
+class _TodaySellScreenState extends State<TodaySellScreen> {
+  var total = 0;
+  TextEditingController cash = TextEditingController();
+  TextEditingController online = TextEditingController();
+  TextEditingController credit = TextEditingController();
+  TextEditingController ebi = TextEditingController();
+  TextEditingController other = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -39,43 +52,60 @@ class TodaySellScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: const [
-                  SizedBox(
+                children: [
+                  const SizedBox(
                     height: 20,
                   ),
                   CustomTextFieldContainer(
                     hintText: 'Cash',
+                    controller: cash,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   CustomTextFieldContainer(
                     hintText: 'Online',
+                    controller: online,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   CustomTextFieldContainer(
                     hintText: 'Credit',
+                    controller: credit,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   CustomTextFieldContainer(
                     hintText: 'EBI',
+                    controller: ebi,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   CustomTextFieldContainer(
                     hintText: 'Others',
+                    controller: other,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
+                  Buttonusage(
+                      colour: AppColors.buttoncolors,
+                      name: 'Calculate total',
+                      onpressedd: () {
+                          setState(() {
+                          total = (int.parse(cash.text)+int.parse(online.text)+int.parse(credit.text)+int.parse(ebi.text)+int.parse(other.text));
+                        });
+                      },
+                    ),
+                const SizedBox(
+                  height: 15,
+                ),
                   Text(
-                    'Total:',
-                    style: TextStyle(
+                    'Total: $total',
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 25,
                       fontWeight: FontWeight.bold,

@@ -5,9 +5,14 @@ import 'package:specialcalculator/util/colors.dart';
 import '/util/custom_text_field_container.dart';
 import '/drawer/panel1_drawer.dart';
 
-class BillerPaidOut extends StatelessWidget {
+class BillerPaidOut extends StatefulWidget {
   const BillerPaidOut({Key? key}) : super(key: key);
 
+  @override
+  State<BillerPaidOut> createState() => _BillerPaidOutState();
+}
+
+class _BillerPaidOutState extends State<BillerPaidOut> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

@@ -36,6 +36,7 @@ class _Panel1SecondryScreenState extends State<Panel1SecondryScreen> {
         ),
         drawer: const CustomPanel1Drawer(),
         body: Container(
+          height: Get.height,
           width: Get.width * 1,
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -76,6 +77,7 @@ class _Panel1SecondryScreenState extends State<Panel1SecondryScreen> {
                       name: 'Add Product',
                       onpressedd: () {
                           setState(() {
+                          itemCount = 2;
                           totalPrice = (int.parse(lot1.text)+int.parse(lot2.text));
                         });
                       },

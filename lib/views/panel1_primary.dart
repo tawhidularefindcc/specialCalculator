@@ -86,17 +86,21 @@ class _Panel1PrimaryScreenState extends State<Panel1PrimaryScreen> {
                       onpressedd: () {
                         lot1.text.isEmpty?
                         setState(() {
+                          itemCount = 2;
                           totalPrice = (int.parse(lot2.text)+int.parse(lot3.text));
                         }):
                         lot2.text.isEmpty?
                         setState(() {
+                          itemCount = 2;
                           totalPrice = (int.parse(lot1.text)+int.parse(lot3.text));
                         }):
                         lot3.text.isEmpty?
                         setState(() {
+                          itemCount = 2;
                           totalPrice = (int.parse(lot1.text)+int.parse(lot2.text));
                         }):
                         setState(() {
+                          itemCount = 3;
                           totalPrice = (int.parse(lot1.text)+int.parse(lot2.text)+int.parse(lot3.text));
                         });
                       },
